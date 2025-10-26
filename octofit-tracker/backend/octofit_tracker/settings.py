@@ -145,3 +145,18 @@ CORS_ALLOW_METHODS = ['DELETE', 'GET', 'OPTIONS', 'PATCH', 'POST', 'PUT']
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Launch React Frontend
+{
+  "name": "Launch React Frontend",
+  "type": "node",
+  "request": "launch",
+  "program": "${workspaceFolder}/octofit-tracker/backend/octofit_tracker/octofit-tracker/frontend/node_modules/react-scripts/scripts/start.js",
+  "cwd": "${workspaceFolder}/octofit-tracker/backend/octofit_tracker/octofit-tracker/frontend",
+  "runtimeExecutable": "npm",
+  "runtimeArgs": ["start"],
+  "port": 3000,
+  "env": {
+    "REACT_APP_CODESPACE_NAME": "${env:CODESPACE_NAME}"
+  }
+}
